@@ -10,8 +10,8 @@ namespace EventName
     {
         static void Main(string[] args)
         {
-            EnterName eName = new EnterName();
-            eName.BannedUser += WarningAlarm;
+            EnterName eName = new EnterName(); // new instace
+            eName.BannedUser += WarningAlarm; // event
             eName.User();
             Console.Read();
 
