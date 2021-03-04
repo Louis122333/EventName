@@ -18,9 +18,11 @@ namespace EventName
         }
         static void WarningAlarm(object sender, BannedUserEventArgs e)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Banned user \"{0}\" found. Sending email to administration.", e.Name.ToUpper());
             Console.WriteLine("Email sent.");
             Console.WriteLine("Warning alarm started.");
+            Console.ResetColor();
             Console.WriteLine("Press ctrl + c to stop the alarm:");
             for (;;)
             {
